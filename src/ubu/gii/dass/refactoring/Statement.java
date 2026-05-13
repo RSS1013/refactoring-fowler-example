@@ -17,7 +17,7 @@ public abstract class Statement {
 
 		@Override
 		String rentalStatement(String title, double charge) {
-			return "\t" + title + " : " + String.valueOf(charge) + "<BR>\\n";
+			return "\t" + title + " : " + String.valueOf(charge) + "<BR>\n";
 		}
 
 		@Override

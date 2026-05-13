@@ -33,17 +33,17 @@ public class Customer {
 	 * Genera el informe de alquileres en formato texto plano.
 	 */
 	public String statement() {
-		return creteStatement(new TextStatement());
+		return createStatement(new TextStatement());
 	}
 
 	/**
 	 * Requerimiento 1: Genera el informe de alquileres en formato HTML.
 	 */
 	public String htmlStatement() {
-		return creteStatement(new HtmlStatement());
+		return createStatement(new HtmlStatement());
 	}
 
-	public String creteStatement(Statement statement) {
+	public String createStatement(Statement statement) {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
 		Iterator<Rental> rentals = _rentals.iterator();
