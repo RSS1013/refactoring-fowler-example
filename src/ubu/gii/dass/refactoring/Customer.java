@@ -46,11 +46,11 @@ public class Customer {
 	public String createStatement(Statement statement) {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
-		Iterator<Rental> rentals = _rentals.iterator();
+		
 		String result = statement.header(getName());
-
-		while (rentals.hasNext()) {
-			Rental each = rentals.next();
+		// Refactorización: uso de for-each para simplificar la iteración
+		for (Rental each : _rentals) {
+			
 
 			double thisAmount = each.getCharge();
 			frequentRenterPoints += each.getFrequentRenterPoints();
